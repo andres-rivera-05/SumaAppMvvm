@@ -27,5 +27,12 @@ namespace SumaAppMvvm.ViewModels
         {
             Resultado = Valor1 + Valor2;         
         }
+        [RelayCommand]
+        public void Limpiar()
+        {
+            Valor1 = 0;
+            Valor2 = 0;
+            Resultado = 0;
+        }
     }
 }
