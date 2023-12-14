@@ -11,13 +11,18 @@
     
     <VerticalStackLayout Spacing="30" VerticalOptions="CenterAndExpand">
         <Label Text="SUMA" FontSize="50" TextColor="White" Margin="0,30,0,0" HorizontalOptions="Center"/>
-        <Entry Text="{Binding Valor1}" Placeholder="Ingrese un numero" WidthRequest="300" FontSize="20" Keyboard="Numeric"/>
-        <Entry Text="{Binding Valor2}" Placeholder="Ingrese un numero" WidthRequest="300" FontSize="20" Keyboard="Numeric"/>
+        <Entry Text="{Binding Valor1}" Placeholder="Ingrese un numero" WidthRequest="300" FontSize="20"
+               Keyboard="Numeric"/>
+        <Entry Text="{Binding Valor2}" Placeholder="Ingrese un numero" WidthRequest="300" FontSize="20" 
+               Keyboard="Numeric"/>
 
-        <Entry Placeholder="Ingrese un numero" Text="{Binding Resultado}" WidthRequest="300" FontSize="20" Keyboard="Numeric"/>
-        <Button Text="Sumar" FontSize="20" Command="{Binding SumarCommand}" HorizontalOptions="Center" WidthRequest="300" CornerRadius="50"
+        <Entry Text="{Binding Resultado}" IsReadOnly="True" WidthRequest="300" FontSize="20" Keyboard="Numeric"/>
+        
+        <Button Text="Sumar" FontSize="20" Command="{Binding SumarCommand}" HorizontalOptions="Center" 
+                WidthRequest="300" CornerRadius="50"
                 Background="#fff" FontAttributes="Bold" Margin="0,30,0,0"/>
-        <Button Text="Limpiar" FontSize="20" HorizontalOptions="Center" WidthRequest="300" CornerRadius="50"
-                Background="#003c81" FontAttributes="Bold" TextColor="White"/>
+        <Button Text="Limpiar" FontSize="20" HorizontalOptions="Center" WidthRequest="300" 
+                CornerRadius="50" Background="#003c81" FontAttributes="Bold" TextColor="White"
+                Command="{Binding LimpiarCommand}"/>
     </VerticalStackLayout>
 </ContentPage>
