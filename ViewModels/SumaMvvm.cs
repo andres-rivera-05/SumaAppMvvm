@@ -25,12 +25,20 @@ namespace SumaAppMvvm.ViewModels
         [RelayCommand]
         public void Sumar() 
         {
-            Resultado = Valor1 + Valor2;         
+            if (Valor1 != 0 && Valor2 != 0)
+            {
+                Resultado = Valor1 + Valor2;
+            }
+            else
+            {
+                Application.Current.MainPage.DisplayAlert("Por favor", "Completa los campos", "ok");
+            }
+                 
         }
         [RelayCommand]
         public void Limpiar()
         {
-            Valor1 = 0;
+            Valor1 = 0 ;
             Valor2 = 0;
             Resultado = 0;
         }
